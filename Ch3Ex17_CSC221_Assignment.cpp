@@ -36,4 +36,5 @@ int main()
     cout << right << "    " << setw(6) << firstNumber + secondNumber << endl;
     cout << "Run the program again for a new problem.";
 
+    return 0;
 }
