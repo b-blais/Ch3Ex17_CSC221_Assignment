@@ -1,5 +1,5 @@
 /*
-Title: Chapter 3 Exercise 17 - Math Tutor Part A
+Title: Chapter 3 Exercise 17 - Math Tutor Part B
 File Name : Ch3Ex17_CSC221_Assignment
 Programmer : Brion Blais
 Date : 10 / 2024
@@ -27,13 +27,24 @@ int main()
     
     int firstNumber = randomInt(myNumbers);
     int secondNumber = randomInt(myNumbers);
+    int userAnwser;
     
-    cout << "Welcome to the math tutor!  Press enter to check your answer.\nHere is your first problem:\n" << endl;
+    cout << "Welcome to the math tutor!  Press enter your answer to have it checked.\nHere is your first problem:\n" << endl;
     cout << right << "     " << setw(5) << firstNumber << endl;
     cout << right << "     " << "+" << setw(4) << secondNumber << endl;
-    cout << "   -------";
-    cin.get();
-    cout << right << "    " << setw(6) << firstNumber + secondNumber << endl;
+    cout << "   -------" << endl;
+    
+    cin >> userAnwser;
+    if (userAnwser == (firstNumber + secondNumber)) {
+        cout << "You are correct!" << endl;
+    }
+    else {
+        cout << "Your answer is not correct. The correct solution is:\n" << endl;
+        cout << right << "     " << setw(5) << firstNumber << endl;
+        cout << right << "     " << "+" << setw(4) << secondNumber << endl;
+        cout << "   -------" << endl;
+        cout << right << "    " << setw(6) << firstNumber + secondNumber << endl;
+    }
     cout << "Run the program again for a new problem.";
-
+    return 0;
 }
